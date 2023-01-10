@@ -2,13 +2,22 @@
 @import 'tailwindcss/components';
 
 
-
-.form-label{
-    @apply text-[#f0e2f0] block py-1 text-center font-semibold
+.cont{
+    @apply px-2 md:px-3 lg:px-4 max-w-screen-2xl mx-auto
 }
-.form-input{
-    @apply outline-[blue] outline-[2px] rounded-md w-full bg-[#f0e2f0] px-2 text-gray-800 py-1
+.navshadow{
+    box-shadow: inset 0px 4px 7px rgb(55 65 81 / 0.3)
+}
+.feed-control{
+    @apply flex flex-col md:flex-row
+}
+.category-button{
+    @apply md:my-2 md:pl-2 md:w-full md:flex justify-start items-center rounded-[8px] md:rounded-lg hover:bg-[#ff0303] hover:border hover:border-gray-700 hover:text-white transition-all duration-200
+}
+.nextimg{
+    @apply object-cover
 }
 
 @import 'tailwindcss/utilities';
 
+ 
