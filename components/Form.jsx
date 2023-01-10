@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import {signIn} from "next-auth/react"
-
 export default function () {
     const [formField,setformField] = useState({email:"",name:"",password:"",password2:""})
     const [islogin,setislogin] = useState(true)

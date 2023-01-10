@@ -3,12 +3,5 @@
 
 
 
-.form-label{
-    @apply text-[#f0e2f0] block py-1 text-center font-semibold
-}
-.form-input{
-    @apply outline-[blue] outline-[2px] rounded-md w-full bg-[#f0e2f0] px-2 text-gray-800 py-1
-}
-
 @import 'tailwindcss/utilities';
 
