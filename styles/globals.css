@@ -1,9 +1,6 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 
-
-<<<<<<< HEAD
-=======
 .cont{
     @apply px-2 md:px-3 lg:px-4 max-w-screen-2xl mx-auto
 }
@@ -19,7 +16,7 @@
 .nextimg{
     @apply object-cover
 }
->>>>>>> 32f4348c59311bc36226724caa95e93d584929c7
+
 
 @import 'tailwindcss/utilities';
 

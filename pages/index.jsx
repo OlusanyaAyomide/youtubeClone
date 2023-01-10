@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-
-export default function index() {
-  return (
-    <div>index</div>
-  )
-=======
 import React,{Fragment} from 'react'
 import Head from "next/head"
 import Header from '../components/feed/Header'
@@ -44,5 +36,5 @@ export async function getServerSideProps(context){
     })
   }
   catch(err){return({notFound:true})}
->>>>>>> 32f4348c59311bc36226724caa95e93d584929c7
+
 }
