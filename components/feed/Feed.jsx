@@ -8,6 +8,7 @@ export default function Feed({data}) {
   const Allctx = useContext(Allcontext)
   const {searchParam,hasrendered} = Allctx
   const [feeds,setfeeds] = useState({data})
+  console.log(data)
   const FeedList = feeds.data.items.map((item,key)=>{
     return(
         <div className='w-full sm:w-6/12 lg:w-3/12 px-2 my-4' key={key}>

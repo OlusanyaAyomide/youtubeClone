@@ -1,17 +1,17 @@
 import React from 'react'
 import ProfileVideo from './profileVideo'
 import Image from 'next/image'
+import FetchApi from '../../store/FetchApi'
 
 export default function Hero({detail,video}) {
     const channelDetail = detail.items[0]
     const timg = channelDetail.brandingSettings.image.bannerExternalUrl
     const channelimg = channelDetail.snippet.thumbnails.high.url
-    console.log(channelDetail)
     const subscriber=(number)=>{
         if(number.length > 3){
             return Math.round((Number(number))/1000)}
             return number}
-   
+
   return (
     <div className='w-full md:w-10/12 lg:w-11/12 cont'>
         <div className='w-full h-[100px] md:h-[140px] lg:h-[180px] mt-2 mb-3 relative'>

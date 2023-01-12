@@ -10,8 +10,7 @@ export default function Channels({detail,video}) {
     console.log(router.query.channelid)
   return (
     <div><Fragment>
-          <MyHead ishome={false}/>
-          <Header/>
+          <Header ishome={false}/>
           <div className='feed-control'>
           <Category/>
           <Hero detail = {detail} video ={video}/>
@@ -28,7 +27,7 @@ export async function getServerSideProps(context){
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'f14f66dcf3msh77e651411894bd9p1bbd03jsn5e107a09d497',
+      'X-RapidAPI-Key': '6c6fd5bcb8msh5430c505dbd79d0p1202e7jsnf26e7df8338d',
       'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
     }
   }; 
