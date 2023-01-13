@@ -18,7 +18,7 @@ export function AllcontextProvider(props) {
   const [videos, setVideos] = useState({});
   const [hasrendered, sethasrendered] = useState(false);
   const [inview, setIsInviewS] = useState(true);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const changesetVideos = (videoList) => {
     setVideos(videoList);
