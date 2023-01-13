@@ -30,6 +30,8 @@ export async function getServerSideProps(context){
     })
     const Data = await res.json()
     const status = res.ok
+    console.log(Data)
+    console.log(res.ok)
     return {Data,status}
   } 
   try{

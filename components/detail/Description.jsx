@@ -20,7 +20,7 @@ export default function Description({data}) {
           {ViewCount(data.items[0].statistics.viewCount)}k views</span>
         <span className="inline-block ml-2">{timeAgo(videoInfo.publishedAt)}</span>
         <div className={`relative ${!isfull?"h-[100px]":"h-full"} overflow-hidden text-sm`}>
-            <Linkify><h1 className={isDarkMode?"text-white":""}>{formatter(videoInfo.description)}</h1></Linkify>
+            <Linkify><h1 className={isDarkMode?"text-white font-light":""}>{formatter(videoInfo.description)}</h1></Linkify>
         <button className={`absolute rounded-3xl pl-8 ${isDarkMode?"bg-dark-400 text-white":"bg-gray-100"} md:px-3 -bottom-1 py-1 right-0 md:pl-16 font-semibold`} onClick={
             ()=>{setisfull((prev=>!prev))}
         }>Show {!isfull?"More":"Less"}</button>

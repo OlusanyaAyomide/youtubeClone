@@ -24,10 +24,10 @@ export default function  ChannelVideo({data,setToggle}) {
                   <div className='h-[80px] w-4/12 overflow-hidden rounded-tr-lg rounded-tl-lg relative' onClick={()=>{
                     setToggle(item.id.videoId)
                   }}>
-                      <Image src={item.snippet.thumbnails.high.url} fill={true} alt='cover-image' style={{objectFit:"cover"}} sizes = "(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"/>
+                      <Image src={item.snippet.thumbnails.high.url} fill={true} alt='cover-image' style={{objectFit:"cover",scale:"120%"}} sizes = "(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"/>
                   </div>
                   <div className='w-8/12 ml-2' onClick={()=>setToggle(item.id.videoId)}>
-                      <button className={`${isDarkMode?"text-gray-300":"text-gray-800"} block md:text-sm lg:text-base`} onClick={()=>
+                      <button className={`${isDarkMode?"text-gray-300":"text-gray-800"} text-left text-sm lg:text-base lowercase tracking-wide`} onClick={()=>
                         {setToggle(item.id.videoId)}}>
                         {item.snippet.title}
                       </button>

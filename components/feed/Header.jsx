@@ -26,7 +26,7 @@ export default function Header({ishome}) {
           {!isDarkMode && <button className='block w-full text-3xl  text-black'><i className='fa fa-moon-o' onClick={()=>{
             setIsDarkMode(true)
           }}></i></button>}
-          {isDarkMode && <button className='block w-full text-3xl bg-yellow-500 bg-clip-text text-transparent' onClick={()=>setIsDarkMode(false)}>
+          {isDarkMode && <button className='block w-full text-3xl text-yellow-500 ' onClick={()=>setIsDarkMode(false)}>
               <i className='fa fa-sun-o'></i>
             </button>}
       </div>

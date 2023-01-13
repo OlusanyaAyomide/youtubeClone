@@ -25,10 +25,10 @@ export default function Hero({data}) {
 },[])
   return (
     <section className={`w-full`}>
-        <div className={`overflow-hidden h-[280px] sm:h-[320px] md:h-[280px] lg:h-[340px] w-full ${inview?"":"fixed"} md:static top-0 left-0 z-10`}>
+        <div className={`overflow-hidden h-[250px] sm:h-[320px] md:h-[280px] lg:h-[340px] w-full ${inview?"":"fixed"} md:static top-0 left-0 z-10`}>
           <VideoPlayer videoId ={videoId} videoImage ={videoImage}/>
         </div>
-        {!inview &&<div className='fixed z-10 top-[280px] left-0 sm:top-[320px] md:hidden w-full'><Tags data={data}/></div>}
+        {!inview &&<div className='fixed z-10 top-[250px] left-0 sm:top-[320px] md:hidden w-full'><Tags data={data}/></div>}
         <div className={`my-1 ${inview?"":"sm:mt-[390px] mt-[370px] md:mt-0"}`}>
           <h1 className='mb-1 text-blue-500 text-sm'>{videoInfo.localized.title} </h1>
           <h1 className={`text-[20px] sm:text-[22px] lg:text-[24px] ${isDarkMode?"text-white":""}`}>{videoInfo.title}</h1>

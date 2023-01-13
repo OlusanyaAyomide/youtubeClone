@@ -29,7 +29,7 @@ export default function Comments({comments}) {
             <h1><span className='font-semibold mr-2'>{author.authorDisplayName}</span>
             <span className={`${isDarkMode?"text-gray-500":"text-gray-700"}  text-sm`}>
               {timeAgo(author.publishedAt)}</span></h1>
-            <h1>{author.textDisplay}</h1>
+            <h1 className='text-sm md:text-base'>{author.textDisplay}</h1>
         </div>
       </div>
     )
