@@ -1,33 +1,34 @@
-import React,{Fragment} from 'react'
+import React,{Fragment,useContext} from 'react'
 import { useRouter } from 'next/router'
 import Header from '../../components/feed/Header'
-import MyHead from '../../components/channels/MyHead'
 import Category from '../../components/feed/Category'
 import Hero from '../../components/channels/Hero'
-import ProfileVideo from '../../components/channels/profileVideo'
+import Allcontext from '../../store/Allcontext'
+import Footer from "../../components/feed/Footer"
+
 export default function Channels({detail,video}) {
-    const router = useRouter()
-    console.log(router.query.channelid)
+    // const router = useRouter()
+    const {isDarkMode} = useContext(Allcontext)
   return (
-    <div><Fragment>
+    <div className={`${isDarkMode?"bg-dark-500":""}`}>
+      <Fragment>
           <Header ishome={false}/>
           <div className='feed-control'>
           <Category/>
           <Hero detail = {detail} video ={video}/>
-        
           </div>
- 
-      </Fragment></div>
+          <Footer/>
+      </Fragment>
+    </div>
   )
 }
 
 export async function getServerSideProps(context){
   const {params} = context
-  console.log(params.channelid)
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '6c6fd5bcb8msh5430c505dbd79d0p1202e7jsnf26e7df8338d',
+      'X-RapidAPI-Key': 'f14f66dcf3msh77e651411894bd9p1bbd03jsn5e107a09d497',
       'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
     }
   }; 

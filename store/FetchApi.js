@@ -10,7 +10,7 @@ export default async function FetchApi(URL) {
       maxResults: "50",
     },
     headers: {
-      "X-RapidAPI-Key": "6c6fd5bcb8msh5430c505dbd79d0p1202e7jsnf26e7df8338d",
+      "X-RapidAPI-Key": "f14f66dcf3msh77e651411894bd9p1bbd03jsn5e107a09d497",
       "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
     },
   };

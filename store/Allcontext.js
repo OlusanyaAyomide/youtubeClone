@@ -9,6 +9,8 @@ const Allcontext = createContext({
   sethasrendered: function () {},
   inview: "",
   setIsInview: function () {},
+  isDarkMode: "",
+  setIsDarkMode: function () {},
 });
 
 export function AllcontextProvider(props) {
@@ -16,6 +18,7 @@ export function AllcontextProvider(props) {
   const [videos, setVideos] = useState({});
   const [hasrendered, sethasrendered] = useState(false);
   const [inview, setIsInviewS] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const changesetVideos = (videoList) => {
     setVideos(videoList);
@@ -33,6 +36,8 @@ export function AllcontextProvider(props) {
     hasrendered,
     inview,
     setIsInview,
+    isDarkMode,
+    setIsDarkMode,
   };
   return (
     <Allcontext.Provider value={context}>{props.children}</Allcontext.Provider>

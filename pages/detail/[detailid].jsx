@@ -6,24 +6,21 @@ import Comments from '../../components/detail/Comments'
 import ChannelVideo from '../../components/detail/ChannelVideo'
 import Allcontext from '../../store/Allcontext'
 import FetchApi from '../../store/FetchApi'
+import Footer from "../../components/feed/Footer"
 
 export default function VideoDetail({data,comments}) {
   const [Toggle,setToggle] = useState(null)
   const [dataStore,setdataStore] = useState({data,comments})
-  console.log(dataStore)
+  const {isDarkMode} = useContext(Allcontext)
 
   useEffect(()=>{
     if (!Toggle){return}
     async function FetchData(){
-      console.log("fetching....")
-      console.log(Toggle)
       const data = await FetchApi(`videos?part=contentDetails%2Csnippet%2Cstatistics&id=${Toggle}`)
       const comments = await FetchApi(`commentThreads?part=snippet&videoId=${Toggle}&maxResults=100`)
       if(data,comments){
         setdataStore({data,comments})
         window.scroll(0,0)
-        console.log(data)
-        console.log(comments)
       }
     }
     FetchData()
@@ -32,6 +29,7 @@ export default function VideoDetail({data,comments}) {
 
   return (
     <Fragment>
+      <div className={isDarkMode?"bg-dark-500":""}>
         <Header ishome={false}/>
         <div className='flex flex-col md:flex-row flex-wrap'>
           <div className='cont w-full md:w-8/12'>
@@ -43,6 +41,8 @@ export default function VideoDetail({data,comments}) {
            <ChannelVideo data={dataStore.data} setToggle ={setToggle}/>
           </div>
         </div>
+        <Footer/>
+      </div>
     </Fragment>
   )
 }
@@ -52,7 +52,7 @@ export async function getServerSideProps(context){
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '6c6fd5bcb8msh5430c505dbd79d0p1202e7jsnf26e7df8338d',
+      'X-RapidAPI-Key': 'f14f66dcf3msh77e651411894bd9p1bbd03jsn5e107a09d497',
       'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
     }
   }; 

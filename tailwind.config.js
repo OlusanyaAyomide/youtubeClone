@@ -43,6 +43,10 @@ module.exports = {
       youtube: {
         500: "#ff0000",
       },
+      dark: {
+        500: "#02030D",
+        400: "#040414",
+      },
     }),
     columns: {
       auto: "auto",

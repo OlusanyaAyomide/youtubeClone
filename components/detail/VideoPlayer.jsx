@@ -6,7 +6,7 @@ export default function VideoPlayer({videoId}) {
   useEffect(()=>{setpass(true)})
   if (pass){
     return (
-      <ReactPlayer controls={true} url ={`https://www.youtube.com/watch?v=${videoId}`} width="100%" height="100%"/>
+      <ReactPlayer controls={true} url ={`http://www.youtube.com/watch?v=${videoId}`} width="100%" height="100%"/>
     )
   }
   else{

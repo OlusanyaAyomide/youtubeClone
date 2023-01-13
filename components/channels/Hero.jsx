@@ -1,12 +1,13 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import ProfileVideo from './profileVideo'
 import Image from 'next/image'
-import FetchApi from '../../store/FetchApi'
+import Allcontext from '../../store/Allcontext'
 
 export default function Hero({detail,video}) {
     const channelDetail = detail.items[0]
     const timg = channelDetail.brandingSettings.image.bannerExternalUrl
     const channelimg = channelDetail.snippet.thumbnails.high.url
+    const {isDarkMode} = useContext(Allcontext)
     const subscriber=(number)=>{
         if(number.length > 3){
             return Math.round((Number(number))/1000)}
@@ -23,12 +24,12 @@ export default function Hero({detail,video}) {
                 <Image src={channelimg} fill={true} alt="channel-img" style={{objectFit:"cover"}}/>
             </div>
             <div className='md:ml-2 mx-auto text-center mt-2'>
-                <h1 className='text-xl font-semibold'>{channelDetail.brandingSettings.channel.title}</h1>
-                <h1 className='text-sm lg:text-md md:text-[17px] my-1 text-gray-700 font-normal'>{channelDetail.snippet.customUrl}</h1>
-                <h1 className='text-sm lg:text-md text-gray-700 '>{subscriber(channelDetail.statistics.subscriberCount)}k Subscribers</h1>
+                <h1 className={`text-xl font-semibold ${isDarkMode?"text-white":""}`}>{channelDetail.brandingSettings.channel.title}</h1>
+                <h1 className={`text-sm lg:text-md md:text-[17px] my-1 ${isDarkMode?"text-gray-500":"text-gray-700"} font-normal`}>{channelDetail.snippet.customUrl}</h1>
+                <h1 className={`text-sm lg:text-md ${isDarkMode?"text-gray-500":"text-gray-700"}`}>{subscriber(channelDetail.statistics.subscriberCount)}k Subscribers</h1>
             </div>
         </div>
-        <div className='text-center md:text-left text-gray-900'>
+        <div className={`text-center md:text-left ${isDarkMode?"text-gray-100":"text-gray-900"}`}>
             <h1>{channelDetail.brandingSettings.channel.description}</h1>
         </div>
         <ProfileVideo video ={video}/>
