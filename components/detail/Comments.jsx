@@ -40,8 +40,8 @@ export default function Comments({comments}) {
         <div className='relative'>
           {CommentList}
           <div className={`absolute ${isDarkMode?"bg-dark-500":"bg-white"} -bottom-1 w-full flex py-2 pt-4 justify-between sm:pr-8 md:pr-16`}>
-            {mapThrough < thread?.length && <button className={`pl-r pr-4 rounded-md  ${isDarkMode?"bg-dark-500":"bg-white"} text-base`} onClick={()=>(handleChange(true))}>Show more...</button>}
-            {mapThrough > 10 && <button className={`pl-6 pr-8 rounded-md text-base ${isDarkMode?"bg-dark-500":"bg-white"}`} onClick={()=>{handleChange(false)}}>Show less...</button>}
+            {mapThrough < thread?.length && <button className={`pl-r pr-4 rounded-md  ${isDarkMode?"bg-dark-500":"bg-white"} text-base outline-none`} onClick={()=>(handleChange(true))}>Show more...</button>}
+            {mapThrough > 10 && <button className={`pl-6 outline-none pr-8 rounded-md text-base ${isDarkMode?"bg-dark-500":"bg-white"}`} onClick={()=>{handleChange(false)}}>Show less...</button>}
             </div>
         </div>
     </section>

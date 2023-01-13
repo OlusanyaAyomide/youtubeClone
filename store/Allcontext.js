@@ -14,7 +14,7 @@ const Allcontext = createContext({
 });
 
 export function AllcontextProvider(props) {
-  const [searchParam, setSearchParam] = useState("New");
+  const [searchParam, setSearchParam] = useState("Latest");
   const [videos, setVideos] = useState({});
   const [hasrendered, sethasrendered] = useState(false);
   const [inview, setIsInviewS] = useState(true);

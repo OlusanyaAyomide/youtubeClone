@@ -30,7 +30,7 @@ export default function Hero({detail,video}) {
             </div>
         </div>
         <div className={`text-center md:text-left ${isDarkMode?"text-gray-100":"text-gray-900"}`}>
-            <h1>{channelDetail.brandingSettings.channel.description}</h1>
+            <h1 className='text-sm'>{channelDetail.brandingSettings.channel.description}</h1>
         </div>
         <ProfileVideo video ={video}/>
     </div>
