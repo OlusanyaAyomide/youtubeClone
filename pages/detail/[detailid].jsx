@@ -52,7 +52,7 @@ export async function getServerSideProps(context){
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '6c6fd5bcb8msh5430c505dbd79d0p1202e7jsnf26e7df8338d',
+      'X-RapidAPI-Key': '94fa79f580msha29c42dcf800c2ap1af9ccjsna0ea5b117667',
       'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
     }
   }; 
